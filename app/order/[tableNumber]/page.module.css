@@ -1,0 +1,491 @@
+.page {
+  min-height: 100vh;
+  background: #faf7f2;
+  color: #2b2118;
+  padding-bottom: 8.5rem;
+}
+
+.brand {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #d6402b;
+  font-weight: 700;
+}
+
+/* ---------- full screen ---------- */
+.fullscreen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  background: #faf7f2;
+  color: #2b2118;
+}
+
+.fullText {
+  margin: 0;
+  max-width: 22rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.fullSub {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #8a7a6a;
+  word-break: break-word;
+}
+
+/* ---------- header ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+  background: rgba(250, 247, 242, 0.94);
+  backdrop-filter: blur(8px);
+}
+
+.tableTitle {
+  margin: 0.1rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.billButton {
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2b2118;
+  background: #fff;
+  border: 1.5px solid #e2d8c9;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.billButton:active {
+  background: #f1eadf;
+}
+
+/* ---------- tabs ---------- */
+.tabs {
+  position: sticky;
+  top: 4.4rem;
+  z-index: 19;
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem 0.9rem;
+  overflow-x: auto;
+  background: rgba(250, 247, 242, 0.94);
+  backdrop-filter: blur(8px);
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b5a4a;
+  background: #fff;
+  border: 1.5px solid #e9dfd0;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tabActive {
+  color: #fff;
+  background: #d6402b;
+  border-color: #d6402b;
+}
+
+.tabBadge {
+  min-width: 1.35rem;
+  padding: 0 0.35rem;
+  font-size: 0.75rem;
+  line-height: 1.35rem;
+  text-align: center;
+  color: #d6402b;
+  background: #fff;
+  border-radius: 999px;
+}
+
+/* ---------- menu list ---------- */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 1rem;
+}
+
+.empty {
+  margin: 2rem 0;
+  text-align: center;
+  color: #8a7a6a;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  background: #fff;
+  border: 1px solid #efe6d8;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(43, 33, 24, 0.04);
+}
+
+.itemName {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.addButton {
+  flex: none;
+  width: 2.9rem;
+  height: 2.9rem;
+  font-size: 1.7rem;
+  line-height: 1;
+  color: #fff;
+  background: #d6402b;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.addButton:active {
+  transform: scale(0.94);
+}
+
+.stepper,
+.stepperSmall {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background: #fbeeea;
+  border-radius: 999px;
+}
+
+.stepper button,
+.stepperSmall button {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #fff;
+  background: #d6402b;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.stepper button:disabled,
+.stepperSmall button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.stepper span,
+.stepperSmall span {
+  min-width: 1.8rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.stepperSmall button {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.2rem;
+}
+
+/* ---------- toast ---------- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 9rem;
+  z-index: 40;
+  transform: translateX(-50%);
+  max-width: calc(100% - 2rem);
+  padding: 0.8rem 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  background: #2f8f5b;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.toastWarn {
+  background: #2b2118;
+}
+
+/* ---------- cart ---------- */
+.cartWrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  padding: 0 0.75rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
+}
+
+.cartPanel {
+  max-height: 45vh;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #efe6d8;
+  border-radius: 20px;
+  box-shadow: 0 -6px 30px rgba(43, 33, 24, 0.12);
+}
+
+.cartPanel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cartPanel li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #f3ece1;
+}
+
+.cartPanel li:last-child {
+  border-bottom: none;
+}
+
+.cartName {
+  flex: 1;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.removeButton {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  color: #8a7a6a;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.orderError {
+  margin: 0 0 0.5rem;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.9rem;
+  color: #a12626;
+  background: #fdecec;
+  border-radius: 12px;
+}
+
+.cartBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem;
+  background: #2b2118;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(43, 33, 24, 0.35);
+}
+
+.cartSummary {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.25rem 0.4rem;
+  color: #fff;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cartSummary:disabled {
+  cursor: default;
+}
+
+.cartSummary strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.cartSummary small {
+  display: block;
+  font-size: 0.8rem;
+  color: #d8cbb9;
+}
+
+.cartCount {
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #2b2118;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.submitButton {
+  flex: none;
+  padding: 0.95rem 1.4rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+  background: #d6402b;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------- dialog ---------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(43, 33, 24, 0.55);
+}
+
+.dialog {
+  width: 100%;
+  max-width: 400px;
+  padding: 1.75rem 1.5rem;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.dialogTitle {
+  margin: 0 0 1.1rem;
+  font-size: 1.35rem;
+  text-align: center;
+}
+
+.billRows {
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.billRows div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #f0e9de;
+}
+
+.billRows dt {
+  color: #6b5a4a;
+}
+
+.billRows dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+}
+
+.total strong {
+  font-size: 2rem;
+  color: #d6402b;
+}
+
+.dialogHint {
+  margin: 0 0 1.1rem;
+  font-size: 0.85rem;
+  color: #8a7a6a;
+  text-align: center;
+}
+
+.billError {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.9rem;
+  color: #a12626;
+  background: #fdecec;
+  border-radius: 12px;
+}
+
+.dialogActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.cancelButton,
+.confirmButton {
+  flex: 1;
+  padding: 0.95rem 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 14px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+}
+
+.cancelButton {
+  color: #2b2118;
+  background: #fff;
+  border-color: #e2d8c9;
+}
+
+.confirmButton {
+  color: #fff;
+  background: #d6402b;
+}
+
+.cancelButton:disabled,
+.confirmButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
